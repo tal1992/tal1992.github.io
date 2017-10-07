@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Javascript</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="css/javascript.css" rel="stylesheet">    
+</head>
+<body>
+
+<div class="well primary-well row well-sm">
+  <div class="text-left col-xs-9">
+    <h4>Learn Javascript</h4>
+    </div>
+  <div class="text-right col-xs-3">
+    <img class="img img-responsive pull-right img-height-logo" src="assets/images/javascript-trans.png" height="40px"/>
+  </div>
+</div>
+
+  <div class="row flexovermobile">
+    <div class="col-xs-12 col-sm-2 sidebar-offcanvas" id="sidebar">
+      
+ <div class="list-group">
+        <a href="includejs.html" class="list-group-item">Getting Started</a>
+        <a href="DOM.html" class="list-group-item">DOM & onload</a>
+        <a href="operators.html" class="list-group-item">Variables, Assignment and Operators</a>
+        <a href="datatype.html" class="list-group-item">Data Type in Javascript</a>
+        <a href="function.html" class="list-group-item active">Functions & Closure</a>
+        <a href="DOMmethods.html" class="list-group-item">Manipulating DOM</a>
+        <a href="events.html" class="list-group-item">Events List</a>
+        <a href="eventcapturing.html" class="list-group-item">Events Handling</a>
+        <a href="numbers.html" class="list-group-item">Number Methods</a>
+        <a href="strings.html" class="list-group-item">String Methods</a>
+        <!--<a href="javascript/boolean" class="list-group-item">Boolean Type and Methods</a>-->
+        <!--<a href="#" class="list-group-item">Arrays and Operation</a>
+        <a href="#" class="list-group-item">Itrating through Array</a>
+        <a href="#" class="list-group-item">Date Objects and Methods</a>
+        <a href="#" class="list-group-item">Continue & Break</a>
+        <a href="#" class="list-group-item">Hoisting, Event Capturing</a>
+        <a href="#" class="list-group-item">Good Practices</a>
+        <h4 class="text-left list-group-item">Advanced</h4>
+        <a href="#" class="list-group-item">Node list</a>
+        <a href="#" class="list-group-item">Objects and Prototypes</a>
+        <a href="#" class="list-group-item">DOM</a>
+        <a href="#" class="list-group-item">AJAX</a>
+        <a href="#" class="list-group-item">Closures & Delays</a>
+        <a href="#" class="list-group-item">Dynamic Event Capturing</a>
+        <a href="#" class="list-group-item">Cookies</a>
+        <a href="#" class="list-group-item">Location and Navigator Object</a>-->
+</div>
+        
+    </div><!--/.sidebar-offcanvas-->
+    <div class="rest-of-the-page col-xs-12">
+      <div class="row">
+      <div class="container-fluid col-xs-12 col-sm-10">
+        <h2>Functions in Javascript</h2>
+
+        <p>Functions are a nothing but a block of code which needs to be called in 
+          order to be executed.
+        </p>
+        <p>Advantages of using Functions are :</p>
+        <ul>
+          <li>It reduces the redundancy of code at different points in the program.</li>
+          <li>It makes the program modular and easy to understand.</li>
+          <li>It saves time and efforts of the developer.</li>
+          <li>
+It makes debugging easier as errors have to be corrected once and at one point only.</li>
+          <li>It avoids repetition of code</li>
+        </ul>
+
+        <hr>
+
+        <h3>Calling Function</h3>
+
+        <div class="panel panel-info">
+          <div class="panel-heading">Invoking Function</div>
+          <div class="panel-body">
+            <pre><code>function sum(x,y){
+    return x*y;
+}
+
+var result = sum(10,20);
+console.log(result); //200</code></pre>
+          </div>
+        </div>
+
+        <div class="panel panel-info">
+          <div class="panel-heading">Invoking Function - The Modular way</div>
+          <div class="panel-body">
+            <pre><code [innerHTML]="mod">var obj = {
+    var1:"Angular",
+    var2: "Way",
+    concat: function () {
+        return this;
+    }
+}
+
+obj.concat();  //AngularWay</code></pre>
+          </div>
+        </div>
+
+        <hr>
+
+        <h3>Closures</h3>
+        <p>Closures are not hard to understand once the core concept is grokked. However, they are impossible to understand by reading any academic papers or academically oriented information about them.</p>
+        <div class="panel panel-info">
+          <div class="panel-heading">Once upon a time, There was a princess...</div>
+          <div class="panel-body">
+            <pre><code [innerHTML]="princess">function princess() {
+
+/*She lived in a wonderful world full of adventures. She met her Prince Charming, rode around her world on a unicorn, battled dragons, encountered talking animals, and many other fantastical things.*/
+
+    var adventures = [];
+
+    function princeCharming() { /* ... */ }
+
+    var unicorn = { /* ... */ },
+        dragons = [ /* ... */ ],
+        squirrel = "Hello!";
+
+        /*But she would always have to return back to her dull world of chores and grown-ups.*/
+
+    return {
+
+    /*And she would often tell them of her latest amazing adventure as a princess.*/
+
+        story: function() {
+            return adventures[adventures.length - 1];
+        }
+    };
+}
+
+//But all they would see is a little girl...
+
+var littleGirl = princess();
+//...telling stories about magic and fantasy.
+
+littleGirl.story();
+/*And even though the grown-ups knew of real princesses, they would never believe in the unicorns or dragons because they could never see them. The grown-ups said that they only existed inside the little girl's imagination. */
+
+/* But we know the real truth; that the little girl with the princess inside... */
+
+//...is really a princess with a little girl inside.</code></pre>
+          </div>
+        </div>
+        <p>In the JavaScript (or any ECMAScript) language, in particular, closures are useful in hiding the implementation of functionality while still revealing the interface.</p>
+
+      <a href="DOMmethods.html" class="btn btn-primary pull-right">Next <span class="glyphicon glyphicon-chevron-right"></span></a>
+      </div> <!-- container fluid ends -->
+      <div class="col-xs-2 advertisement"></div>
+              
+    </div> 
+  </div>
+  </div>
+
+    
+</body>
+</html>

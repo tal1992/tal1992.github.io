@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Javascript</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="css/javascript.css" rel="stylesheet">    
+</head>
+<body>
+
+<div class="well primary-well row well-sm">
+  <div class="text-left col-xs-9">
+    <h4>Learn Javascript</h4>
+    </div>
+  <div class="text-right col-xs-3">
+    <img class="img img-responsive pull-right img-height-logo" src="assets/images/javascript-trans.png" height="40px"/>
+  </div>
+</div>
+
+  <div class="row flexovermobile">
+    <div class="col-xs-12 col-sm-2 sidebar-offcanvas" id="sidebar">
+      
+ <div class="list-group">
+        <a href="includejs.html" class="list-group-item">Getting Started</a>
+        <a href="DOM.html" class="list-group-item">DOM & onload</a>
+        <a href="operators.html" class="list-group-item">Variables, Assignment and Operators</a>
+        <a href="datatype.html" class="list-group-item active">Data Type in Javascript</a>
+        <a href="function.html" class="list-group-item">Functions & Closure</a>
+        <a href="DOMmethods.html" class="list-group-item">Manipulating DOM</a>
+        <a href="events.html" class="list-group-item">Events List</a>
+        <a href="eventcapturing.html" class="list-group-item">Events Handling</a>
+        <a href="numbers.html" class="list-group-item">Number Methods</a>
+        <a href="strings.html" class="list-group-item">String Methods</a>
+        <!--<a href="javascript/boolean" class="list-group-item">Boolean Type and Methods</a>-->
+        <!--<a href="#" class="list-group-item">Arrays and Operation</a>
+        <a href="#" class="list-group-item">Itrating through Array</a>
+        <a href="#" class="list-group-item">Date Objects and Methods</a>
+        <a href="#" class="list-group-item">Continue & Break</a>
+        <a href="#" class="list-group-item">Hoisting, Event Capturing</a>
+        <a href="#" class="list-group-item">Good Practices</a>
+        <h4 class="text-left list-group-item">Advanced</h4>
+        <a href="#" class="list-group-item">Node list</a>
+        <a href="#" class="list-group-item">Objects and Prototypes</a>
+        <a href="#" class="list-group-item">DOM</a>
+        <a href="#" class="list-group-item">AJAX</a>
+        <a href="#" class="list-group-item">Closures & Delays</a>
+        <a href="#" class="list-group-item">Dynamic Event Capturing</a>
+        <a href="#" class="list-group-item">Cookies</a>
+        <a href="#" class="list-group-item">Location and Navigator Object</a>-->
+</div>
+        
+    </div><!--/.sidebar-offcanvas-->
+    <div class="rest-of-the-page col-xs-12">
+
+      <div class="container-fluid col-xs-12 col-sm-10">
+      <h2>Data Types</h2>  
+      <p>JavaScript is a loosely typed or a dynamic language. That means you don't have to 
+        declare the type of a variable ahead of time. The type will get determined 
+        automatically while the program is being processed. That also means that you can have 
+        the same variable as different types:
+      </p>
+
+      <div class="panel panel-info">
+        <div class="panel-heading">No Need of Defining Type</div>
+        <div class="panel-body">
+          <pre><code>var anything = 20;    // anything is now a Number
+var anything = 'Angular way'; // anything is now a String
+var anything = true;  // anything is now a Boolean</code></pre>  
+        </div>
+      </div>
+
+      <h3>Data Types in ES6</h3>
+      <ol>
+        <li><b>Boolean</b> - Boolean represents a logical entity and can have two values:
+           true, and false.
+        </li>
+        <li><b>Null</b>- The value null represents the intentional absence of any object value.</li>
+        <li><b>Undefined</b> - No value has been assigned to the variable.</li>
+        <li><b>Number</b> - It ranges from +infinity to -infinity. It also represents float.</li>
+        <li><b>String</b>-  JavaScript strings are immutable. This means that once a string is created, it is not possible to modify it. However, it is still possible to create another string based on an operation on the original string.</li>
+        <li><b>Object</b>- Object has some set of properties which can be modified.</li>
+        <li><b>Symbol</b> - New in ES6- A Symbol is a unique and immutable primitive value and may be used as the key of an Object property
+        </li>
+      </ol> 
+
+      <hr>
+
+      <h3>Getting Type of a Variable using <code>typeof</code></h3>
+
+      
+<table class="table table-bordered table-striped table-hover">
+ <thead>
+  <tr>
+   <th scope="col">Variable</th>
+   <th scope="col">typeof(Variable)</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Undefined</td>
+   <td><code>"undefined"</code></td>
+  </tr>
+  <tr>
+   <td>Null</td>
+   <td><code>"object" </code>(Bug in Javascript)</td>
+  </tr>
+  <tr>
+   <td>Boolean</td>
+   <td><code>"boolean"</code></td>
+  </tr>
+  <tr>
+   <td>Number</td>
+   <td><code>"number"</code></td>
+  </tr>
+  <tr>
+   <td>String</td>
+   <td><code>"string"</code></td>
+  </tr>
+  <tr>
+   <td>Symbol (new in ECMAScript 2015)</td>
+   <td><code>"symbol"</code></td>
+  </tr>
+  <tr>
+   <td>Host object (provided by the JS environment)</td>
+   <td><em>Implementation-dependent</em></td>
+  </tr>
+  <tr>
+   <td>Function object (implements [[Call]] in ECMA-262 terms)</td>
+   <td><code>"function"</code></td>
+  </tr>
+  <tr>
+   <td>Any other object</td>
+   <td><code>"object"</code></td>
+  </tr>
+ </tbody>
+</table>   
+<hr>   
+
+<h3>Undefined vs Null</h3>
+
+<div class="panel panel-info">
+  <div class="panel-heading">In JavaScript, undefined means a variable has been declared but has not yet been assigned a value</div>
+  <div class="panel-body">
+    <pre><code [innerHTML]="undef">var TestVar;
+alert(TestVar); //shows undefined
+alert(typeof TestVar); //shows undefined</code></pre>
+  </div>
+</div>
+
+<div class="panel panel-info">
+  <div class="panel-heading">null is an assigned value. It can be assigned to a variable as a representation of no value</div>
+  <div class="panel-body">
+    <pre><code>var TestVar = null;
+alert(TestVar); //shows null
+alert(typeof TestVar); //shows object</code></pre>
+  </div>
+</div>
+
+<hr>
+
+<p>Note: null is often used to signify an empty reference to an object, hence its type is object.</p>
+
+<a href="function.html" class="btn btn-primary pull-right">Next <span class="glyphicon glyphicon-chevron-right"></span></a>
+      </div> <!-- container fluid ends -->
+      <div class="col-xs-2 advertisement"></div>
+              
+    </div> 
+  </div>
+
+    
+</body>
+</html>

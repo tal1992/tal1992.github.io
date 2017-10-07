@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Javascript</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">   
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="css/javascript.css" rel="stylesheet">    
+</head>
+<body>
+
+<div class="well primary-well row well-sm">
+  <div class="text-left col-xs-9">
+    <h4>Learn Javascript</h4>
+    </div>
+  <div class="text-right col-xs-3">
+    <img class="img img-responsive pull-right img-height-logo" src="assets/images/javascript-trans.png" height="40px"/>
+  </div>
+</div>
+
+  <div class="row flexovermobile">
+    <div class="col-xs-12 col-sm-2 sidebar-offcanvas" id="sidebar">
+      
+ <div class="list-group">
+        <a href="includejs.html" class="list-group-item">Getting Started</a>
+        <a href="DOM.html" class="list-group-item">DOM & onload</a>
+        <a href="operators.html" class="list-group-item">Variables, Assignment and Operators</a>
+        <a href="datatype.html" class="list-group-item">Data Type in Javascript</a>
+        <a href="function.html" class="list-group-item">Functions & Closure</a>
+        <a href="DOMmethods.html" class="list-group-item">Manipulating DOM</a>
+        <a href="events.html" class="list-group-item active">Events List</a>
+        <a href="eventcapturing.html" class="list-group-item">Events Handling</a>
+        <a href="numbers.html" class="list-group-item">Number Methods</a>
+        <a href="strings.html" class="list-group-item">String Methods</a>
+        <!--<a href="javascript/boolean" class="list-group-item">Boolean Type and Methods</a>-->
+        <!--<a href="#" class="list-group-item">Arrays and Operation</a>
+        <a href="#" class="list-group-item">Itrating through Array</a>
+        <a href="#" class="list-group-item">Date Objects and Methods</a>
+        <a href="#" class="list-group-item">Continue & Break</a>
+        <a href="#" class="list-group-item">Hoisting, Event Capturing</a>
+        <a href="#" class="list-group-item">Good Practices</a>
+        <h4 class="text-left list-group-item">Advanced</h4>
+        <a href="#" class="list-group-item">Node list</a>
+        <a href="#" class="list-group-item">Objects and Prototypes</a>
+        <a href="#" class="list-group-item">DOM</a>
+        <a href="#" class="list-group-item">AJAX</a>
+        <a href="#" class="list-group-item">Closures & Delays</a>
+        <a href="#" class="list-group-item">Dynamic Event Capturing</a>
+        <a href="#" class="list-group-item">Cookies</a>
+        <a href="#" class="list-group-item">Location and Navigator Object</a>-->
+</div>
+        
+    </div><!--/.sidebar-offcanvas-->
+    <div class="rest-of-the-page col-xs-12">
+
+      <div class="container-fluid col-xs-12 col-sm-10">
+
+        <h2>Events in Javascript</h2>
+
+        <table class="table table-bordered table-striped table-condensed">
+ <caption>Resource Events</caption>
+ <thead>
+  <tr>
+   <th scope="col">Event Name</th>
+   <th scope="col">Fired When</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>cached</code></td>
+   <td>The resources listed in the manifest have been downloaded, and the application is now cached.</td>
+  </tr>
+  <tr>
+   <td><code>error</code></td>
+   <td>A resource failed to load.</td>
+  </tr>
+  <tr>
+   <td><code>abort</code></td>
+   <td>The loading of a resource has been aborted.</td>
+  </tr>
+  <tr>
+   <td><code>load</code></td>
+   <td>A resource and its dependent resources have finished loading.</td>
+  </tr>
+  <tr>
+   <td><code>beforeunload</code></td>
+   <td>The window, the document and its resources are about to be unloaded.</td>
+  </tr>
+  <tr>
+   <td><code>unload</code></td>
+   <td>The document or a dependent resource is being unloaded.</td>
+  </tr>
+ </tbody>
+</table> 
+
+<table class="table table-bordered table-striped table-condensed">
+ <caption>Network Events</caption>
+ <thead>
+  <tr>
+   <th scope="col">Event Name</th>
+   <th scope="col">Fired When</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>online</code></td>
+   <td>The browser has gained access to the network.</td>
+  </tr>
+  <tr>
+   <td><code>offline</code></td>
+   <td>The browser has lost access to the network.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="table table-bordered table-striped table-condensed">
+ <caption>Focus Events</caption>
+ <thead>
+  <tr>
+   <th scope="col">Event Name</th>
+   <th scope="col">Fired When</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>focus</code></td>
+   <td>An element has received focus (does not bubble).</td>
+  </tr>
+  <tr>
+   <td><code>blur</code></td>
+   <td>An element has lost focus (does not bubble).</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="table table-bordered table-striped table-condensed">
+ <caption>Websocket Events</caption>
+ <thead>
+  <tr>
+   <th scope="col">Event Name</th>
+   <th scope="col">Fired When</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>open</code></td>
+   <td>A WebSocket connection has been established.</td>
+  </tr>
+  <tr>
+   <td><code>message</code></td>
+   <td>A message is received through a WebSocket.</td>
+  </tr>
+  <tr>
+   <td><code>error</code></td>
+   <td>A WebSocket connection has been closed with prejudice (some data couldn't be sent for example).</td>
+  </tr>
+  <tr>
+   <td><code>close</code></td>
+   <td>A WebSocket connection has been closed.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="table table-bordered table-striped table-condensed">
+ <caption>Session History Events</caption>
+ <thead>
+  <tr>
+   <th scope="col">Event Name</th>
+   <th scope="col">Fired When</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>pagehide</code></td>
+   <td>A session history entry is being traversed from.</td>
+  </tr>
+  <tr>
+   <td><code>pageshow</code></td>
+   <td>A session history entry is being traversed to.</td>
+  </tr>
+  <tr>
+   <td><code>popstate</code></td>
+   <td>A session history entry is being navigated to (in certain cases).</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="table table-bordered table-striped table-condensed">
+ <caption>Form Events</caption>
+ <thead>
+  <tr>
+   <th scope="col">Event Name</th>
+   <th scope="col">Fired When</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>reset</code></td>
+   <td>The reset button is pressed</td>
+  </tr>
+  <tr>
+   <td><code>submit</code></td>
+   <td>The submit button is pressed</td>
+  </tr>
+ </tbody>
+</table>
+
+
+<table class="table table-bordered table-striped table-condensed">
+ <caption>View Events</caption>
+ <thead>
+  <tr>
+   <th scope="col">Event Name</th>
+   <th scope="col">Fired When</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>fullscreenchange</code></td>
+   <td>An element was turned to fullscreen mode or back to normal mode.</td>
+  </tr>
+  <tr>
+   <td><code>fullscreenerror</code></td>
+   <td>It was impossible to switch to fullscreen mode for technical reasons or because the permission was denied.</td>
+  </tr>
+  <tr>
+   <td><code>resize</code></td>
+   <td>The document view has been resized.</td>
+  </tr>
+  <tr>
+   <td><code>scroll</code></td>
+   <td>The document view or an element has been scrolled.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="table table-bordered table-striped table-condensed">
+ <caption>Mouse Events</caption>
+ <thead>
+  <tr>
+   <th scope="col">Event Name</th>
+   <th scope="col">Fired When</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>mouseenter</code></td>
+   <td>A pointing device is moved onto the element that has the listener attached.</td>
+  </tr>
+  <tr>
+   <td><code>mouseover</code></td>
+   <td>A pointing device is moved onto the element that has the listener attached or onto one of its children.</td>
+  </tr>
+  <tr>
+   <td><code>mousemove</code></td>
+   <td>A pointing device is moved over an element. (Fired continously as the mouse moves.)</td>
+  </tr>
+  <tr>
+   <td><code>mousedown</code></td>
+   <td>A pointing device button is pressed on an element.</td>
+  </tr>
+  <tr>
+   <td><code>mouseup</code></td>
+   <td>A pointing device button is released over an element.</td>
+  </tr>
+  <tr>
+   <td><code>auxclick</code></td>
+   <td>A pointing device button (ANY non-primary button) has been pressed and released on an element.</td>
+  </tr>
+  <tr>
+   <td><code>click</code></td>
+   <td>A pointing device button (ANY button; soon to be primary button only) has been pressed and released on an element.</td>
+  </tr>
+  <tr>
+   <td><code>dblclick</code></td>
+   <td>A pointing device button is clicked twice on an element.</td>
+  </tr>
+  <tr>
+   <td><code>contextmenu</code></td>
+   <td>The right button of the mouse is clicked (before the context menu is displayed).</td>
+  </tr>
+  <tr>
+   <td><code>wheel</code></td>
+   <td>A wheel button of a pointing device is rotated in any direction.</td>
+  </tr>
+  <tr>
+   <td><code>mouseleave</code></td>
+   <td>A pointing device is moved off the element that has the listener attached.</td>
+  </tr>
+  <tr>
+   <td><code>mouseout</code></td>
+   <td>A pointing device is moved off the element that has the listener attached or off one of its children.</td>
+  </tr>
+  <tr>
+   <td><code>select</code></td>
+   <td>Some text is being selected.</td>
+  </tr>
+  <tr>
+   <td><code>pointerlockchange</code></td>
+   <td>The pointer was locked or released.</td>
+  </tr>
+  <tr>
+   <td><code>pointerlockerror</code></td>
+   <td>It was impossible to lock the pointer for technical reasons or because the permission was denied.</td>
+  </tr>
+ </tbody>
+</table>
+
+<table class="table table-bordered table-striped table-condensed">
+ <caption>Media Events</caption>
+ <thead>
+  <tr>
+   <th scope="col">Event Name</th>
+   <th scope="col">Fired When</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>durationchange</code></td>
+   <td>The <code>duration</code> attribute has been updated.</td>
+  </tr>
+  <tr>
+   <td><code>loadedmetadata</code></td>
+   <td>The metadata has been loaded.</td>
+  </tr>
+  <tr>
+   <td><code>loadeddata</code></td>
+   <td>The first frame of the media has finished loading.</td>
+  </tr>
+  <tr>
+   <td><code>canplay</code></td>
+   <td>The browser can play the media, but estimates that not enough data has been loaded to play the media up to its end without having to stop for further buffering of content.</td>
+  </tr>
+  <tr>
+   <td><code>canplaythrough</code></td>
+   <td>The browser estimates it can play the media up to its end without stopping for content buffering.</td>
+  </tr>
+  <tr>
+   <td><code>ended</code></td>
+   <td>Playback has stopped because the end of the media was reached.</td>
+  </tr>
+  <tr>
+   <td><code>emptied</code></td>
+   <td>The media has become empty; for example, this event is sent if the media has already been loaded (or partially loaded), and the <a href="/en-US/docs/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement" rel="internal"><code>load()</code></a>&nbsp;method is called to reload it.</td>
+  </tr>
+  <tr>
+   <td><code>stalled</code></td>
+   <td>The user agent is trying to fetch media data, but data is unexpectedly not forthcoming.</td>
+  </tr>
+  <tr>
+   <td><code>suspend</code></td>
+   <td>Media data loading has been suspended.</td>
+  </tr>
+  <tr>
+   <td><code>play</code></td>
+   <td>Playback has begun.</td>
+  </tr>
+  <tr>
+   <td><code>playing</code></td>
+   <td>Playback is ready to start after having been paused or delayed due to lack of data.</td>
+  </tr>
+  <tr>
+   <td><code>pause</code></td>
+   <td>Playback has been paused.</td>
+  </tr>
+  <tr>
+   <td><code>waiting</code></td>
+   <td>Playback has stopped because of a temporary lack of data.</td>
+  </tr>
+  <tr>
+   <td><code>seeking</code></td>
+   <td>A <em>seek</em> operation began.</td>
+  </tr>
+  <tr>
+   <td><code>seeked</code></td>
+   <td>A <em>seek</em> operation completed.</td>
+  </tr>
+  <tr>
+   <td><code>ratechange</code></td>
+   <td>The playback rate has changed.</td>
+  </tr>
+  <tr>
+   <td><code>timeupdate</code></td>
+   <td>The time indicated by the <code>currentTime</code> attribute has been updated.</td>
+  </tr>
+  <tr>
+   <td><code>volumechange</code></td>
+   <td>The volume has changed.</td>
+  </tr>
+  <tr>
+   <td><code>complete</code></td>
+   <td>The rendering of an <a href="/en-US/docs/Web/API/OfflineAudioContext" title="The OfflineAudioContext interface is an AudioContext interface representing an audio-processing graph built from linked together AudioNodes. In contrast with a standard AudioContext, an OfflineAudioContext doesn't render the audio to the device hardware; instead, it generates it, as fast as it can, and outputs the result to an AudioBuffer."><code>OfflineAudioContext</code></a> is terminated.</td>
+  </tr>
+  <tr>
+   <td><code>audioprocess</code></td>
+   <td>The input buffer of a <a href="/en-US/docs/Web/API/ScriptProcessorNode" title=""><code>ScriptProcessorNode</code></a> is ready to be processed.</td>
+  </tr>
+ </tbody>
+</table>
+
+
+
+      <a href="eventcapturing.html" class="btn btn-primary pull-right">Next <span class="glyphicon glyphicon-chevron-right"></span></a>
+      </div> <!-- container fluid ends -->
+      <div class="col-xs-2 advertisement"></div>
+              
+    </div> 
+  </div>
+
+    
+</body>
+</html>

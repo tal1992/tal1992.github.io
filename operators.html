@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Javascript</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="css/javascript.css" rel="stylesheet">    
+</head>
+<body>
+
+<div class="well primary-well row well-sm">
+  <div class="text-left col-xs-9">
+    <h4>Learn Javascript</h4>
+    </div>
+  <div class="text-right col-xs-3">
+    <img class="img img-responsive pull-right img-height-logo" src="assets/images/javascript-trans.png" height="40px"/>
+  </div>
+</div>
+
+  <div class="row flexovermobile">
+    <div class="col-xs-12 col-sm-2 sidebar-offcanvas" id="sidebar">
+      
+ <div class="list-group">
+        <a href="includejs.html" class="list-group-item">Getting Started</a>
+        <a href="DOM" class="list-group-item">DOM & onload</a>
+        <a href="operators.html" class="list-group-item active">Variables, Assignment and Operators</a>
+        <a href="datatype.html" class="list-group-item">Data Type in Javascript</a>
+        <a href="function.html" class="list-group-item">Functions & Closure</a>
+        <a href="DOMmethods.html" class="list-group-item">Manipulating DOM</a>
+        <a href="events.html" class="list-group-item">Events List</a>
+        <a href="eventcapturing.html" class="list-group-item">Events Handling</a>
+        <a href="numbers.html" class="list-group-item">Number Methods</a>
+        <a href="strings.html" class="list-group-item">String Methods</a>
+        <!--<a href="javascript/boolean" class="list-group-item">Boolean Type and Methods</a>-->
+        <!--<a href="#" class="list-group-item">Arrays and Operation</a>
+        <a href="#" class="list-group-item">Itrating through Array</a>
+        <a href="#" class="list-group-item">Date Objects and Methods</a>
+        <a href="#" class="list-group-item">Continue & Break</a>
+        <a href="#" class="list-group-item">Hoisting, Event Capturing</a>
+        <a href="#" class="list-group-item">Good Practices</a>
+        <h4 class="text-left list-group-item">Advanced</h4>
+        <a href="#" class="list-group-item">Node list</a>
+        <a href="#" class="list-group-item">Objects and Prototypes</a>
+        <a href="#" class="list-group-item">DOM</a>
+        <a href="#" class="list-group-item">AJAX</a>
+        <a href="#" class="list-group-item">Closures & Delays</a>
+        <a href="#" class="list-group-item">Dynamic Event Capturing</a>
+        <a href="#" class="list-group-item">Cookies</a>
+        <a href="#" class="list-group-item">Location and Navigator Object</a>-->
+</div>
+        
+    </div><!--/.sidebar-offcanvas-->
+    <div class="rest-of-the-page col-xs-10">
+
+      <div class="container-fluid col-xs-12 col-sm-10">
+        <h2>Variables and Operators</h2>
+
+        <div class="panel panel-info">
+          <div class="panel-heading">Variables declaration in Javascript</div>
+          <div class="panel-body">
+            <pre><code>var apples = 15;
+var oranges = 5;
+var appleQuantity = 5;
+var orangeQuantity = 10;
+
+var total = apples*appleQuantity + oranges*orangeQuantity;</code></pre>
+          </div>
+        </div>
+
+        <h5>Points to remember:</h5>
+        <ol>
+          <li>The first character must be an ASCII letter (either uppercase or lowercase), or an underscore (_) character. Note that a number cannot be used as the first character.</li>
+          <li>Subsequent characters must be letters, numbers, or underscores (_).</li>
+          <li>The variable name must not be a reserved word.</li>
+          <li>The first time a variable appears in your script is its declaration. 
+              You should declare variables before using them. 
+              You do this using the var keyword.
+              If you do not initialize your variable in the var statement, it automatically takes on the value undefined.
+              </li>
+        </ol>
+        <hr>
+        <h3>Operators in Javascript</h3>
+        <p>JavaScript has the following types of operators. This section describes the 
+          operators and contains information about operator precedence.
+        </p>
+        <h4>Assignment Operators</h4>
+<table class=" table table-bordered table-hover table-striped table-condensed">
+ <thead>
+  <tr>
+   <th>Name</th>
+   <th>Shorthand</th>
+   <th>Meaning</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Assignment</td>
+   <td><code>x = y</code></td>
+   <td><code>x = y</code></td>
+  </tr>
+  <tr>
+   <td>Addition assignment</td>
+   <td><code>x += y</code></td>
+   <td><code>x = x + y</code></td>
+  </tr>
+  <tr>
+   <td>Subtraction assignment</td>
+   <td><code>x -= y</code></td>
+   <td><code>x = x - y</code></td>
+  </tr>
+  <tr>
+   <td>Multiplication assignment</td>
+   <td><code>x *= y</code></td>
+   <td><code>x = x * y</code></td>
+  </tr>
+  <tr>
+   <td>Division assignment</td>
+   <td><code>x /= y</code></td>
+   <td><code>x = x / y</code></td>
+  </tr>
+  <tr>
+   <td>Remainder assignment</td>
+   <td><code>x&nbsp;%= y</code></td>
+   <td><code>x = x&nbsp;% y</code></td>
+  </tr>
+  <tr>
+   <td>Exponentiation assignment</td>
+   <td><code>x **= y</code></td>
+   <td><code>x = x ** y</code></td>
+  </tr>
+  <tr>
+   <td>Left shift assignment</td>
+   <td><code>x &lt;&lt;= y</code></td>
+   <td><code>x = x &lt;&lt; y</code></td>
+  </tr>
+  <tr>
+   <td>Right shift assignment</td>
+   <td><code>x &gt;&gt;= y</code></td>
+   <td><code>x = x &gt;&gt; y</code></td>
+  </tr>
+  <tr>
+   <td>Unsigned right shift assignment</td>
+   <td><code>x &gt;&gt;&gt;= y</code></td>
+   <td><code>x = x &gt;&gt;&gt; y</code></td>
+  </tr>
+  <tr>
+   <td>Bitwise AND assignment</td>
+   <td><code>x &amp;= y</code></td>
+   <td><code>x = x &amp; y</code></td>
+  </tr>
+  <tr>
+   <td>Bitwise XOR assignment</td>
+   <td><code>x ^= y</code></td>
+   <td><code>x = x ^ y</code></td>
+  </tr>
+  <tr>
+   <td>Bitwise OR assignment</td>
+   <td><code>x |= y</code></td>
+   <td><code>x = x | y</code></td>
+  </tr>
+ </tbody>
+</table>
+<hr>
+
+<h4>Comparison Operator</h4>
+<table class=" table table-bordered table-hover table-striped table-condensed">
+ <thead>
+  <tr>
+   <th scope="col">Operator</th>
+   <th scope="col">Description</th>
+   <th scope="col">Examples returning true</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Equal (<code>==</code>)</td>
+   <td>Returns <code>true</code> if the operands are equal.</td>
+   <td><code>3 == var1</code>
+    <p><code>"3" == var1</code></p>
+    <code>3 == '3'</code></td>
+  </tr>
+  <tr>
+   <td>Not equal (<code>!=</code>)</td>
+   <td>Returns <code>true</code> if the operands are not equal.</td>
+   <td><code>var1 != 4<br>
+    var2 != "3"</code></td>
+  </tr>
+  <tr>
+   <td>Strict equal(<code>===</code>)</td>
+   <td>Returns <code>true</code> if the operands are equal and of the same type.</td>
+   <td><code>3 === var1</code></td>
+  </tr>
+  <tr>
+   <td>Strict not equal (<code>!==</code>)</td>
+   <td>Returns <code>true</code> if the operands are of the same type but not equal, or are of different type.</td>
+   <td><code>var1 !== "3"<br>
+    3 !== '3'</code></td>
+  </tr>
+  <tr>
+   <td>Greater than (<code>&gt;</code>)</td>
+   <td>Returns <code>true</code> if the left operand is greater than the right operand.</td>
+   <td><code>var2 &gt; var1<br>
+    "12" &gt; 2</code></td>
+  </tr>
+  <tr>
+   <td>Greater than or equal(<code>&gt;=</code>)</td>
+   <td>Returns <code>true</code> if the left operand is greater than or equal to the right operand.</td>
+   <td><code>var2 &gt;= var1<br>
+    var1 &gt;= 3</code></td>
+  </tr>
+  <tr>
+   <td>Less than (<code>&lt;</code>)</td>
+   <td>Returns <code>true</code> if the left operand is less than the right operand.</td>
+   <td><code>var1 &lt; var2<br>
+    "2" &lt; 12</code></td>
+  </tr>
+  <tr>
+   <td>Less than or equal(<code>&lt;=</code>)</td>
+   <td>Returns <code>true</code> if the left operand is less than or equal to the right operand.</td>
+   <td><code>var1 &lt;= var2<br>
+    var2 &lt;= 5</code></td>
+  </tr>
+ </tbody>
+</table>
+ <hr>
+
+<h4>Arithmetic Operators</h4>
+<table class=" table table-bordered table-hover table-striped table-condensed">
+ <thead>
+  <tr>
+   <th scope="col">Operator</th>
+   <th scope="col">Description</th>
+   <th scope="col">Example</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Remainder (<code>%</code>)</td>
+   <td>Binary operator. Returns the integer remainder of dividing the two operands.</td>
+   <td>12 % 5 returns 2.</td>
+  </tr>
+  <tr>
+   <td>Increment (<code>++</code>)</td>
+   <td>Unary operator. Adds one to its operand. If used as a prefix operator (<code>++x</code>), returns the value of its operand after adding one; if used as a postfix operator (<code>x++</code>), returns the value of its operand before adding one.</td>
+   <td>If <code>x</code> is 3, then <code>++x</code> sets <code>x</code> to 4 and returns 4, whereas <code>x++</code> returns 3 and, only then, sets <code>x</code> to 4.</td>
+  </tr>
+  <tr>
+   <td>Decrement (<code>--</code>)</td>
+   <td>Unary operator. Subtracts one from its operand. The return value is analogous to that for the increment operator.</td>
+   <td>If <code>x</code> is 3, then <code>--x</code> sets <code>x</code> to 2 and returns 2, whereas <code>x--</code> returns 3 and, only then, sets <code>x</code> to 2.</td>
+  </tr>
+  <tr>
+   <td>Unary negation (<code>-</code>)</td>
+   <td>Unary operator. Returns the negation of its operand.</td>
+   <td>If <code>x</code> is 3, then <code>-x</code> returns -3.</td>
+  </tr>
+  <tr>
+   <td>Unary plus (<code>+</code>)</td>
+   <td>Unary operator. Attempts to convert the operand to a number, if it is not already.</td>
+   <td><code>+"3"</code> returns <code>3</code>.<br>
+    <code>+true</code> returns <code>1.</code></td>
+  </tr>
+  <tr>
+   <td>Exponentiation operator(<code>**</code>)</td>
+   <td>Calculates the <code>base</code> to the&nbsp;<code>exponent</code> power, that is, <code>base<sup>exponent</sup></code></td>
+   <td><code>2 ** 3</code> returns <code>8</code>.<br>
+    <code>10 ** -1</code> returns <code>0.1</code>.</td>
+  </tr>
+ </tbody>
+</table>
+<hr>
+
+<h4>Bitwise Operator</h4>
+<table class=" table table-bordered table-hover table-striped table-condensed">
+ <thead>
+  <tr>
+   <th scope="col">Operator</th>
+   <th scope="col">Usage</th>
+   <th scope="col">Description</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Bitwise AND</td>
+   <td><code>a &amp; b</code></td>
+   <td>Returns a one in each bit position for which the corresponding bits of both operands are ones.</td>
+  </tr>
+  <tr>
+   <td>Bitwise OR</td>
+   <td><code>a | b</code></td>
+   <td>Returns a zero in each bit position for which the corresponding bits of both operands are zeros.</td>
+  </tr>
+  <tr>
+   <td>Bitwise XOR</td>
+   <td><code>a ^ b</code></td>
+   <td>Returns a zero in each bit position for which the corresponding bits are the same.<br>
+    [Returns a one in each bit position for which the corresponding bits are different.]</td>
+  </tr>
+  <tr>
+   <td>Bitwise NOT</td>
+   <td><code>~ a</code></td>
+   <td>Inverts the bits of its operand.</td>
+  </tr>
+  <tr>
+   <td>Left shift</td>
+   <td><code>a &lt;&lt; b</code></td>
+   <td>Shifts <code>a</code> in binary representation <code>b</code> bits to the left, shifting in zeros from the right.</td>
+  </tr>
+  <tr>
+   <td>Sign-propagating right shift</td>
+   <td><code>a &gt;&gt; b</code></td>
+   <td>Shifts <code>a</code> in binary representation <code>b</code> bits to the right, discarding bits shifted off.</td>
+  </tr>
+  <tr>
+   <td>Zero-fill right shift</td>
+   <td><code>a &gt;&gt;&gt; b</code></td>
+   <td>Shifts <code>a</code> in binary representation <code>b</code> bits to the right, discarding bits shifted off, and shifting in zeros from the left.</td>
+  </tr>
+ </tbody>
+</table>
+<hr>
+
+<h4>Logical Operators</h4>
+<table class=" table table-bordered table-hover table-striped table-condensed">
+ <thead>
+  <tr>
+   <th scope="col">Operator</th>
+   <th scope="col">Usage</th>
+   <th scope="col">Description</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>Logical AND<code> </code>(<code>&amp;&amp;</code>)</td>
+   <td><code>expr1 &amp;&amp; expr2</code></td>
+   <td>Returns <code>expr1</code> if it can be converted to <code>false</code>; otherwise, returns <code>expr2</code>. Thus, when used with Boolean values, <code>&amp;&amp;</code> returns <code>true</code> if both operands are true; otherwise, returns <code>false</code>.</td>
+  </tr>
+  <tr>
+   <td>Logical OR(<code>||</code>)</td>
+   <td><code>expr1 || expr2</code></td>
+   <td>Returns <code>expr1</code> if it can be converted to <code>true</code>; otherwise, returns <code>expr2</code>. Thus, when used with Boolean values, <code>||</code> returns <code>true</code> if either operand is true; if both are false, returns <code>false</code>.</td>
+  </tr>
+  <tr>
+   <td>Logical NOT(<code>!</code>)</td>
+   <td><code>!expr</code></td>
+   <td>Returns <code>false</code> if its single operand can be converted to <code>true</code>; otherwise, returns <code>true</code>.</td>
+  </tr>
+ </tbody>
+</table>
+<hr>
+
+<h4>Conditional (ternary) operator</h4>
+<code>var entry = (age >= 18) ? 'Yes' : 'No';</code>
+<hr>
+
+        <h3>Coercion</h3>
+
+        <p>JavaScript is a loosely typed language, as opposed to strongly typed languages like C++. This means that JavaScript variables have no predetermined type. Instead, the type of a variable is the type of its value. This behavior allows you to treat a value as if it were of a different type.</p>
+        <hr>
+
+        <h3>Automatic Type Conversion</h3>
+        <p>Some operators or statements expect data of a particular type and will perform automatic type conversion. </p>
+        
+        <div class="panel panel-info">
+          <div class="panel-heading">Implicit Type Conversion</div>
+          <div class="panel-body">
+            <pre><code>console.log(5 + '5') //55;
+console.log(5 + 5 + '5') //105;
+console.log(7 * '7') //49
+console.log(5 == '5') //true</code></pre>
+          </div>
+        </div>
+
+        <p>Data types are explained in next chapter in detail</p>
+
+        <a href="datatype.html" class="btn btn-primary pull-right">Next <span class="glyphicon glyphicon-chevron-right"></span></a>
+      </div> <!-- co3ntainer fluid ends -->
+      <div class="col-xs-2 advertisement"></div>
+              
+    </div> 
+  </div>
+
+    
+</body>
+</html>

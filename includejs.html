@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Javascript</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="css/javascript.css" rel="stylesheet">    
+</head>
+<body>
+
+<div class="well primary-well row well-sm">
+  <div class="text-left col-xs-9">
+    <h4>Learn Javascript</h4>
+    </div>
+  <div class="text-right col-xs-3">
+    <img class="img img-responsive pull-right img-height-logo" src="assets/images/javascript-trans.png" height="40px"/>
+  </div>
+</div>
+
+  <div class="row flexovermobile">
+    <div class="col-xs-12 col-sm-2 sidebar-offcanvas" id="sidebar">
+      
+ <div class="list-group">
+        <a href="includejs.html" class="list-group-item active">Getting Started</a>
+        <a href="DOM.html" class="list-group-item">DOM & onload</a>
+        <a href="operators.html" class="list-group-item">Variables, Assignment and Operators</a>
+        <a href="datatype.html" class="list-group-item">Data Type in Javascript</a>
+        <a href="function.html" class="list-group-item">Functions & Closure</a>
+        <a href="DOMmethods.html" class="list-group-item">Manipulating DOM</a>
+        <a href="events.html" class="list-group-item">Events List</a>
+        <a href="eventcapturing.html" class="list-group-item">Events Handling</a>
+        <a href="numbers.html" class="list-group-item">Number Methods</a>
+        <a href="strings.html" class="list-group-item">String Methods</a>
+        <!--<a href="javascript/boolean" class="list-group-item">Boolean Type and Methods</a>-->
+        <!--<a href="#" class="list-group-item">Arrays and Operation</a>
+        <a href="#" class="list-group-item">Itrating through Array</a>
+        <a href="#" class="list-group-item">Date Objects and Methods</a>
+        <a href="#" class="list-group-item">Continue & Break</a>
+        <a href="#" class="list-group-item">Hoisting, Event Capturing</a>
+        <a href="#" class="list-group-item">Good Practices</a>
+        <h4 class="text-left list-group-item">Advanced</h4>
+        <a href="#" class="list-group-item">Node list</a>
+        <a href="#" class="list-group-item">Objects and Prototypes</a>
+        <a href="#" class="list-group-item">DOM</a>
+        <a href="#" class="list-group-item">AJAX</a>
+        <a href="#" class="list-group-item">Closures & Delays</a>
+        <a href="#" class="list-group-item">Dynamic Event Capturing</a>
+        <a href="#" class="list-group-item">Cookies</a>
+        <a href="#" class="list-group-item">Location and Navigator Object</a>-->
+</div>
+        
+    </div><!--/.sidebar-offcanvas-->
+    <div class="rest-of-the-page col-xs-12">
+      <div class="container-fluid col-xs-12 col-sm-10">
+
+        <div class="row">
+          <div class="col-xs-12">
+            <h2>Including External JS file in HTML</h2>
+            <p>Javascript code can be written internally with HTML page but it is not a Good Practice. </p>
+            <p>  Always write Javscript in a seperate file and include it in HTML page.</p>
+            <p>  Prefer External Javascript files because : </p>
+              <ol>
+                <li><b>Reuse</b> - External Code can be used in multiple pages</li>
+                <li><b>Caching</b> - Browser Caches External JS files, making pages to load quickly and saves user data.</li>
+                <li><b>Readibility</b> - Seperate code is readable and easy to debug.</li>
+                <li><b>Debugger</b> - Its easy to run browser debugger in JS file. You cannot run debugger in HTML page</li>
+              </ol>
+              <p>Note: It is advisable to not use multiple seperate files because it increases number of HTTP/HTTPS request and increases load time.
+                 Developers should try to keep Network request as low as possible.
+              </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <hr>
+            <h3>How to include Javascript file</h3>
+            <p>You can include External JS files either inside head tag or before body closing tag. However it does affects the page load time.</p>
+
+    <div class="panel panel-info">
+      <div class="panel-heading">Including Javascript</div>
+      <div class="panel-body">
+              <code>
+              &lt;head&gt;  <br>
+              &emsp;&emsp;  &lt;script  src="js/myfile.js"&gt;&lt;/script&gt; <br>
+              &lt;/head&gt;   
+              </code> 
+      </div>
+    </div>
+
+            <p>To avoid <i>Render-Blocking</i> in your webpage, always try to include 
+            javascript file before closing of body tag. Advantages are :</p>
+            <ol>
+              <li>Page do not wait for the javascript to be downloaded and executed.</li>
+              <li>HTML is parsed quickly and loading appears to be quick.</li>
+              <li>You need HTML and CSS before Javscript. So incase your js file is large , it wont block Page page content from rendering.</li>
+            </ol>
+
+    <div class="panel panel-info">
+      <div class="panel-heading">Javscript before closing body tag</div>
+      <div class="panel-body">
+              <code>
+              &lt;body&gt;  <br>
+              &emsp;&emsp;  ... <br>
+              &emsp;&emsp;  ... <br>
+              &emsp;&emsp;  &lt;script  src="js/myfile.js"&gt; &lt;/script&gt; <br>
+              &lt;/body&gt;   
+              </code>      
+      </div>
+    </div>            
+              <hr>
+
+              <h3>Usind Async and Defer tag</h3>
+              <p>Without async or defer, browser will run your script immediately, before rendering the elements that's below your script t</p>
+          
+            <ol>
+              <li>Without async or defer, browser will run your script immediately, before rendering the elements that's below your script tag.</li>
+              <li>With async (asynchronous), browser will continue to load the HTML page and render it while the browser load and execute the script at the same time.</li>
+              <li>With defer, browser will run your script when the page finished parsing. (not necessary finishing downloading all image files)</li>  
+            </ol>  
+
+    <div class="panel panel-info">
+      <div class="panel-heading">Async and Defer</div>
+      <div class="panel-body">
+              <code>
+              &emsp;&emsp;  &lt;script  src="js/myfile.js" async&gt;  &lt;/script&gt; <br>
+              </code>
+              OR <br>
+              <code>
+              &emsp;&emsp;  &lt;script  src="js/myfile.js" defer&gt;  &lt;/script&gt; <br>
+              </code>        
+      </div>
+    </div>
+
+
+
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12">
+            <hr>
+            <h3>What if Javascript is disabled ?</h3>
+            <p>
+              Use noscript tag for handling disabled javascript scenario,
+              Theoratacially this tag also works for browser which do not support javascript.
+            </p>
+            <p>  
+              Frankly speaking, i am yet to see a modern browser which do have support for js. 
+            </p>
+    <div class="panel panel-info">
+      <div class="panel-heading">noscript usage</div>
+      <div class="panel-body">
+            <code>
+              &emsp;&emsp;
+              &lt;noscript&gt; Javascript is disabled in your Browser &lt;/noscript&gt;
+            </code>    
+      </div>
+    </div>      
+          </div>
+        </div>
+
+        <h3>Using Charset</h3>
+        <p>Words and sentences in text are created from characters. Examples of characters include the Latin letter á or the Chinese ideograph 請 or the Devanagari character ह.</p>
+
+          <p>You may not be able to see some of the characters in this page because you don't have the necessary fonts. If you click on the place where you expected to see a character you will link to a graphic version. This page is encoded in UTF-8.
+Characters that are needed for a specific purpose are grouped into a character set (also called a repertoire). (To refer to characters in an unambiguous way, each character is associated with a number, called a code point.)</p> 
+    <div class="panel panel-info">
+      <div class="panel-heading">Using Charset</div>       
+      <div class="panel-body">
+        <code>
+          &emsp;&emsp;
+          &lt;script src="js/myfile.js" charset="external file encoding type"&gt; &lt;/script&gt;
+        </code>
+      </div>
+    </div>  
+
+          <h5><b>UTF-8</b> and <b>ISO-8859-1</b> are widely used encoding types.</h5>
+
+<div class="row">
+
+
+</div>  
+<!-- exercise ends -->        
+
+<a href="DOM.html" class="btn btn-primary pull-right">Next <span class="glyphicon glyphicon-chevron-right"></span></a>          
+
+      </div> <!-- container fluid ends -->
+      <div class="col-xs-2 advertisement"></div>
+              
+    </div> 
+  </div>
+
+    
+</body>
+</html>

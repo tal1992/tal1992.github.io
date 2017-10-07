@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Javascript</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="css/javascript.css" rel="stylesheet">    
+</head>
+<body>
+
+<div class="well primary-well row well-sm">
+  <div class="text-left col-xs-9">
+    <h4>Learn Javascript</h4>
+    </div>
+  <div class="text-right col-xs-3">
+    <img class="img img-responsive pull-right img-height-logo" src="assets/images/javascript-trans.png" height="40px"/>
+  </div>
+</div>
+
+  <div class="row flexovermobile">
+    <div class="col-xs-12 col-sm-2 sidebar-offcanvas" id="sidebar">
+      
+ <div class="list-group">
+        <a href="includejs.html" class="list-group-item">Getting Started</a>
+        <a href="DOM.html" class="list-group-item active">DOM & onload</a>
+        <a href="operators.html" class="list-group-item">Variables, Assignment and Operators</a>
+        <a href="datatype.html" class="list-group-item">Data Type in Javascript</a>
+        <a href="function.html" class="list-group-item">Functions & Closure</a>
+        <a href="DOMmethods.html" class="list-group-item">Manipulating DOM</a>
+        <a href="events.html" class="list-group-item">Events List</a>
+        <a href="eventcapturing.html" class="list-group-item">Events Handling</a>
+        <a href="numbers.html" class="list-group-item">Number Methods</a>
+        <a href="strings.html" class="list-group-item">String Methods</a>
+        <!--<a href="javascript/boolean" class="list-group-item">Boolean Type and Methods</a>-->
+        <!--<a href="#" class="list-group-item">Arrays and Operation</a>
+        <a href="#" class="list-group-item">Itrating through Array</a>
+        <a href="#" class="list-group-item">Date Objects and Methods</a>
+        <a href="#" class="list-group-item">Continue & Break</a>
+        <a href="#" class="list-group-item">Hoisting, Event Capturing</a>
+        <a href="#" class="list-group-item">Good Practices</a>
+        <h4 class="text-left list-group-item">Advanced</h4>
+        <a href="#" class="list-group-item">Node list</a>
+        <a href="#" class="list-group-item">Objects and Prototypes</a>
+        <a href="#" class="list-group-item">DOM</a>
+        <a href="#" class="list-group-item">AJAX</a>
+        <a href="#" class="list-group-item">Closures & Delays</a>
+        <a href="#" class="list-group-item">Dynamic Event Capturing</a>
+        <a href="#" class="list-group-item">Cookies</a>
+        <a href="#" class="list-group-item">Location and Navigator Object</a>-->
+</div>
+        
+    </div><!--/.sidebar-offcanvas-->
+    <div class="rest-of-the-page col-xs-12">
+
+      <div class="container-fluid col-xs-12 col-sm-10">
+        <h3>Document Object Model</h3>
+        
+        <div class="row">
+          <div class="col-xs-12">
+            <p>This is HTML</p>
+            <pre><code>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;the title&lt;/title&gt;
+    &lt;link href='css/app.css' type='text/css' rel='stylesheet'&gt;
+    &lt;script src='js/app.js'&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;header&lt;/h1&gt;
+    &lt;div&gt;
+      &lt;p&gt;hello!&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+              </code></pre>
+          </div>
+          
+          <div class="col-xs-12">
+            <p>This is its DOM Representation</p>
+<pre><code>
+                             ------------                             
+                             | document |    &lt;--- DOM root object.                           
+                             ------------                             
+                                  |                                   
+                                  |                                   
+                             ------------                             
+                             |   html   |     &lt;--- document.documentElement                  
+                             ------------                             
+                    ______________|______________                     
+                    |                           |                     
+               ------------                ------------               
+               |   head   |                |   body   |               
+               ------------                ------------               
+      ______________|______________             |______________       
+      |             |             |             |             |       
+ ------------  ------------  ------------  ------------  ------------ 
+ |  title   |  |   link   |  |  script  |  |    h1    |  |   div    | 
+ ------------  ------------  ------------  ------------  ------------ 
+                                                              |       
+                                                              |       
+                                                         ------------ 
+                                                         |    p     | 
+                                                         ------------ 
+</code></pre>  
+          </div>
+        </div> <!-- row ends -->
+        <hr>
+        <p>
+        A Web page is a document. 
+        It is represented as nodes and objects.
+        The DOM is an object-oriented representation of the web page, which can be modified with 
+        a scripting language such as JavaScript.
+        </p>
+        <p>
+          The representation of DOM structure resembles a tree-like view, where each node is 
+          an object representing a part of the markup, depending on the type each element also 
+          inherits specific and shared functionalities.
+          It defines the logical structure of documents and the way a document is accessed and 
+          manipulated. In the DOM specification, the term "document" is used in the broad sense
+           - increasingly, XML is being used as a way of representing many different kinds of 
+           information that may be stored in diverse systems, and much of this would
+            traditionally be seen as data rather than as documents. Nevertheless, XML presents 
+            this data as documents, and the DOM may be used to manage this data.
+        </p>
+        <p>
+          With the Document Object Model, programmers can create and build documents, 
+          navigate their structure, and add, modify, or delete elements and content. 
+          Anything found in an HTML or XML document can be accessed, changed, deleted, or 
+          added using the Document Object Model, with a few exceptions - in particular, the 
+          DOM interfaces for the internal subset and external subset have not yet been
+           specified.
+        </p>
+
+        <hr>
+
+        <h3>Window.onload</h3>
+        <p>The load event fires at the end of the document loading process. At this point, 
+          all of the objects in the document are in the DOM, and all the images and sub-frames 
+          have finished loading.
+        </p>
+
+        <p><b>It is adviced to put javascript code inside <code>window.onload</code></b></p>
+
+<div class="panel panel-info">
+  <div class="panel-heading">Calling Function after page load</div>
+  <div class="panel-body">
+      <pre><code>function my_code(){
+  alert("Page is ready");
+}
+window.onload=my_code();</code>
+</pre>
+    </div>
+</div>
+
+        or simply put entire javascript inside window.onload
+
+<div class="panel panel-info">
+  <div class="panel-heading">Calling Function after page load</div>
+  <div class="panel-body"><pre><code>window.onload = function(){ 
+  //your code here
+}</code></pre></div>
+</div>        
+
+
+        <p>It ensures that HTML is loaded before performing any operation on it.</p>
+
+        <p>Note:<code>document.ready</code> is a great alternative to window.onload if you're using jQuery.</p>
+
+        <hr>
+        <a href="operators.html" class="btn btn-primary pull-right">Next <span class="glyphicon glyphicon-chevron-right"></span></a>
+       
+      </div> <!-- container fluid ends -->
+      <div class="col-xs-2 advertisement"></div>
+              
+    </div> 
+  </div>
+
+    
+</body>
+</html>
