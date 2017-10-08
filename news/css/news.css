@@ -1,0 +1,30 @@
+.full-news-img{
+    padding-left:20px;
+}
+.bordernews{
+    border:1px solid #eee;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.date{
+    margin-bottom:20px;
+    color:#777;
+}
+h3{
+    font-weight: bold;
+}
+h4{
+    line-height: 1.5;
+    font-size:16px;
+}
+.active{
+    background-color: #F42 !important;
+    color: #fff !important;
+}
+
+@media(max-width:768px){
+  .full-news-img{
+    max-width: 100px;  
+    min-height: 150px;
+   }
+}
