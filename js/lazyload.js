@@ -1,13 +1,12 @@
-$(document).ready(function(){
-    var lazyBackground = $('.lazyloadit') ;
-    lazyBackground.each(function(i, obj){
-        var replace = this.getAttribute('data-src');
-        $(this).css({'background-image':replace}) ;
+
+    var lazyBackground = document.getElementsByClassName('lazyloadit'); 
+        [].forEach.call(lazyBackground, function (key, value) {
+        var replace = key.getAttribute('data-src');
+        key.style.backgroundImage = replace;
     });
     
-    var lazyloadimage = $('.lazyloadimage');
-    lazyloadimage.each(function(i, obj){
-        var rep = this.getAttribute('data-src');
-        $(this).attr('src',rep);
-    })
-});
+    var lazyloadimage = document.getElementsByClassName('lazyloadimage');
+        [].forEach.call(lazyloadimage, function (key, value) {        
+        var rep = key.getAttribute('data-src');
+        key.src = rep;
+    });
