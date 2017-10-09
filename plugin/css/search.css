@@ -1,20 +1,17 @@
 .bg {
+/*
     background-image: url("../infosys.jpg");
     height: 100vh; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+*/
 }
 body, html {
     height: 100%;
     margin: 0;
 }
-.white-text{
-    color:#fff;
-}
 .v-align{
-    margin-top:20%;
-    margin-bottom:0;
 }
 .search-suggestion{
     display: none;
@@ -25,7 +22,19 @@ body, html {
 }
 li{
     color:#000;
-    font-size:18px;
+    font-size:12spx;
     padding:5px;
     border-bottom:1px solid #ccc;
+}
+.form-group{
+    vertical-align: top;
+    display: block !important;
+    margin-bottom: 20px !important;
+}
+.hideload{
+    display: block;
+    width: 337px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    display: none;
 }
