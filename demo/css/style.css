@@ -299,7 +299,19 @@ iframe {
 	}
     .animated-bg-coresy{
             background: url("http://www.machakosgovernment.com/Machawood/images/parallax-bg1.jpg")  center center fixed;
+            height: auto;
     }
+
+    @media screen and (max-width: 768px){
+    .animated-bg-coresy{
+        -moz-background-size: auto;
+        -webkit-background-size: auto;
+        background-attachment: scroll;
+        background-position: top;
+        background-size: auto;
+       }
+    }
+
 @-webkit-keyframes background {
     0% {
         background: radial-gradient(circle at center, #032149 0%, #042c62 28%, #002448 66%, #021631 90%);
