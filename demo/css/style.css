@@ -292,8 +292,10 @@ iframe {
 		background-color: #fff;
 	}
 	.animated-bg-coresy {
+/*
 		-webkit-animation: background 1s linear infinite;
 		animation: background 1s linear infinite;
+*/
 	}
 @-webkit-keyframes background {
     0% {
@@ -331,4 +333,14 @@ iframe {
 }
 .logo-text-color {
     color: #0394fd;
+}
+.animated-bg-coresy{
+        background-image: url("https://onepagelove-wpengine.netdna-ssl.com/wp-content/uploads/2014/03/opl-parallax-universe.jpg");
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+.posFixed{
+    /* Create the parallax scrolling effect */
 }

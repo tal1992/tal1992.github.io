@@ -144,8 +144,16 @@ var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 }
 	
       $(document).ready(function(){
-		  
-		$(document).on('scroll', function (e) { updateColor(); });
+		var trackScroll = document.getElementsByClassName('animated-bg-coresy')[0];  
+		$(document).on('scroll', function (e) { 
+            updateColor(); 
+            if(trackScroll.getBoundingClientRect().top < 60){
+                trackScroll.classList.add('posFixed');
+            }
+            else{
+                 trackScroll.classList.remove('posFixed');
+            }
+        });
 		  
 		  function updateColor() {
 		      var o = $(document).scrollTop() / 30;
