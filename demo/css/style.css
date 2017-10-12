@@ -295,8 +295,11 @@ iframe {
 /*
 		-webkit-animation: background 1s linear infinite;
 		animation: background 1s linear infinite;
-*/
+*/      
 	}
+    .animated-bg-coresy{
+            background: url("http://www.machakosgovernment.com/Machawood/images/parallax-bg1.jpg")  center center fixed;
+    }
 @-webkit-keyframes background {
     0% {
         background: radial-gradient(circle at center, #032149 0%, #042c62 28%, #002448 66%, #021631 90%);
@@ -333,13 +336,6 @@ iframe {
 }
 .logo-text-color {
     color: #0394fd;
-}
-.animated-bg-coresy{
-        background-image: url("https://onepagelove-wpengine.netdna-ssl.com/wp-content/uploads/2014/03/opl-parallax-universe.jpg");
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
 }
 .posFixed{
     /* Create the parallax scrolling effect */
