@@ -298,15 +298,17 @@ iframe {
 */      
 	}
     .animated-bg-coresy{
+/*
             background: url("http://www.machakosgovernment.com/Machawood/images/parallax-bg1.jpg")  center center fixed;
             height: auto;
             background-size: auto;
             background-attachment: scroll;
+*/
     }
 
     @media screen and (max-width: 768px){
     .animated-bg-coresy{
-            background-attachment: initial;
+/*            background-attachment: initial;*/
        }
     }
 
@@ -349,4 +351,13 @@ iframe {
 }
 .posFixed{
     /* Create the parallax scrolling effect */
+}
+.particles-js-canvas-el{
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: rgb(33,36,50);
+    position: fixed;
+    z-index: -8;
+    top: 0;
 }
