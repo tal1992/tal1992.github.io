@@ -10,3 +10,9 @@
         var rep = key.getAttribute('data-src');
         key.src = rep;
     });
+
+    var hamburger = document.getElementsByClassName('navbar-toggle')[0];
+        hamburger.onclick = function(){
+        var el = document.getElementById('myNavbar')
+        el.style.display = el.style.display === 'none' ? 'block' : 'none';
+        }
