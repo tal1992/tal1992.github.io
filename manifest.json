@@ -1,0 +1,30 @@
+{
+  "lang": "en",
+  "dir": "ltr",
+  "short_name": "AngularWay",
+  "name": "Angularway",
+  "description": "Latest Tech News at your fingertips",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fff",
+  "theme_color": "#dd0031",
+  "icons": [{
+      "src": "manifest/manifestlogo.jpg",
+      "sizes": "48x48",
+      "type": "image/jpg"
+    },{
+      "src": "manifest/manifest_144.jpg",
+      "sizes": "144x144",
+      "type": "image/jpg"
+    },{
+      "src": "manifest/manifestlogo_192.jpg",
+      "sizes": "192x192",
+      "type": "image/jpg"
+    },{
+      "src": "manifest/manifestlogo_512.jpg",
+      "sizes": "512x512",
+      "type": "image/jpg"
+    }
+    ],
+  "start_url": "/"
+}
