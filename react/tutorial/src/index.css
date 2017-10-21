@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  padding: 20px 0;
+  font-family: sans-serif;
+}
+.list-group-item{
+  cursor:pointer;
+  transition:0.2s all ease;
+}
+.list-group-item:hover{
+  background: #eee;
+}
