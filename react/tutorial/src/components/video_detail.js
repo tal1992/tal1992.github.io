@@ -3,7 +3,7 @@ import React,{Component} from 'react';
 class VideoDetails extends Component{
     render = () => {
         if(! this.props.video){
-            return '<div>Loading</div>';
+            return 'Loading...';
         }
         const videoid = this.props.video.id.videoId;
         const url = 'http://www.youtube.com/embed/'+videoid;

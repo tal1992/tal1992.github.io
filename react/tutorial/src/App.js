@@ -11,7 +11,7 @@ const API_KEY = 'AIzaSyC7wYKVBLJM3fQEl_blUbFULsWmvQXIaAU';
 class App extends Component {
   constructor(props){
     super(props);
-    this.state = {videos:[], active:null, searchTerm:'Robot'};
+    this.state = {videos:[], active:null, searchTerm:'Apple'};
     this.ytsearch(this.state.searchTerm);
   }
 
@@ -30,7 +30,7 @@ class App extends Component {
         <div className="row">
             <VideoDetail video={this.state.active}/>
             <VideoList videos={this.state.videos} 
-            onVideoSelect={(active) => this.setState({active})} />
+            onVideoSelect={(activeV) => this.setState({activeV})} />
         </div>
       </div> 
     );
