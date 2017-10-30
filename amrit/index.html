@@ -53,7 +53,7 @@
             var additionalCost = document.getElementById('addmin').value ; 
             var totalMinutes = document.getElementById('total').value;
 
-            calculateCost(name,threemincost,additionalCost,13,totalMinutes);
+            calculateCost(name,threemincost,additionalCost,totalMinutes);
             
             function calculateCost(name, fixedcostfor3min, additionalCost, m){
                 var c = parseFloat(fixedcostfor3min) + parseFloat((totalMinutes - 3)*additionalCost) ;
