@@ -5,13 +5,13 @@ import Searchbar from './components/search_bar';
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
 import YTSearch from 'youtube-api-search';
-
+ 
 const API_KEY = 'AIzaSyC7wYKVBLJM3fQEl_blUbFULsWmvQXIaAU';
 
 class App extends Component {
   constructor(props){
     super(props);
-    this.state = {videos:[], active:null, searchTerm:'Apple'};
+    this.state = {videos:[], active:null, searchTerm:'Ok Google'};
     this.ytsearch(this.state.searchTerm);
   }
 
