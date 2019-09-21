@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/supersquad/static/css/main.ba4f52f4.chunk.css",
+    "main.js": "/supersquad/static/js/main.060a0f34.chunk.js",
+    "main.js.map": "/supersquad/static/js/main.060a0f34.chunk.js.map",
+    "runtime-main.js": "/supersquad/static/js/runtime-main.63cc95c2.js",
+    "runtime-main.js.map": "/supersquad/static/js/runtime-main.63cc95c2.js.map",
+    "static/js/2.fe6fdac9.chunk.js": "/supersquad/static/js/2.fe6fdac9.chunk.js",
+    "static/js/2.fe6fdac9.chunk.js.map": "/supersquad/static/js/2.fe6fdac9.chunk.js.map",
+    "index.html": "/supersquad/index.html",
+    "precache-manifest.af9eb914638944a5ff34228280819d3b.js": "/supersquad/precache-manifest.af9eb914638944a5ff34228280819d3b.js",
+    "service-worker.js": "/supersquad/service-worker.js",
+    "static/css/main.ba4f52f4.chunk.css.map": "/supersquad/static/css/main.ba4f52f4.chunk.css.map",
+    "static/media/index.css": "/supersquad/static/media/background.4ddc758d.jpg",
+    "static/media/logo.svg": "/supersquad/static/media/logo.25bf045c.svg"
+  }
+}
