@@ -35,7 +35,7 @@
     function windowScrollAnimations() {
         var $animate = $('.animate-up, .animate-down, .animate-left, .animate-right');
 
-        if (!isMobile) {
+        //if (!isMobile) {
             $animate.appear();
 
             $animate.on('appear', function (event, affected) {
@@ -45,7 +45,7 @@
             });
 
             $.force_appear();
-        }
+        //}
     }
 
     function fillProgressBars() {
